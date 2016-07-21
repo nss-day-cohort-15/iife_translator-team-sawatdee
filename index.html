@@ -4,20 +4,19 @@
   <title>Translator</title>
 </head>
 <body>
+
 <form>
-  <select>
-    <option value ="Pig Latin">Pig Latin</option>
+  <select id="select">
+    <option value ="pigLatin">Pig Latin</option>
     <option value="Thai">Thai</option>
     <option value="German">German</option>
   </select>
-  <input type="text" name="holidaymessage" placeholder="Holiday Message">
+  <textarea name="holidaymessage" placeholder="Holiday Message" id="inputText">
+  <button type="button" id="submit">Translate Me Please!</button>
 </form>
 
-  <input type="button" value="Translate!" placeholder="Translate!" id="submit">
-
-
   <h3>Translation:</h3>
-
+  <div id="translation"></div>
 <script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
