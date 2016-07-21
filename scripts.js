@@ -1,4 +1,9 @@
-var inputEnglish = "Merry Christmas"
+console.dir(submit);
+
+submit.addEventListener("click", main);
+
+function main (){
+var inputEnglish =
 var Thai = {
   Merry : "ร่าเริง",
   Christmas : "คริสต์มาส",
@@ -15,4 +20,10 @@ for (var i = 0; i < inputWords.length; i++) {
   translatedWords.push(Thai[inputWords[i]]);
 }
 
-console.log(translatedWords);
+newString = translatedWords.join(" ");
+console.log(newString);
+
+.inner
+
+}
+
