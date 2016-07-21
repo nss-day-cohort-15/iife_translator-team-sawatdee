@@ -35,4 +35,11 @@ translator.checkLanguage = (function() {
 
 translator.submitEvents = (function() {
   submit.addEventListener("click", translator.checkLanguage)
+  document.addEventListener("keypress", checkKey)
+
+  function checkKey(e) {
+    if (e.keyCode === 13) {
+      translator.checkLanguage();
+    }
+  }
 })()
