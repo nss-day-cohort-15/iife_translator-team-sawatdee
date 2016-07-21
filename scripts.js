@@ -11,14 +11,28 @@ var translator = (function() {
         year: "ear-Yay",
         and: "and-way"
       }
-      console.log(pigLatin.merry)
       for (var i = 0; i < inputWords.length; i++) {
         translatedWords.push(pigLatin[inputWords[i]]);
       }
       translation.innerHTML = translatedWords.join(" ");
     }
   }
+})()
 
-    })()
+translator.checkLanguage = (function() {
+  return function() {
+      if (select.value === "pigLatin") {
+        translator.getPigLatin();
+      } else if (select.value === "Thai") {
+        console.log("Running Thai Conversion");
+        translator.Thai();
+      } else if (select.value === "German") {
+        console.log("Running German Conversion");
+        translator.German();
+      }
+    }
+})()
 
-submit.addEventListener("click", translator.getPigLatin)
+translator.submitEvents = (function() {
+  submit.addEventListener("click", translator.checkLanguage)
+})()
