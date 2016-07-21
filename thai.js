@@ -1,6 +1,5 @@
-var translator = (function() {
-  return {
-    getThai: function() {
+translator.Thai = (function() {
+  return function() {
       var inputWords = inputText.value.toLowerCase().split(" ")
       var translatedWords = [];
       var thai = {
@@ -11,13 +10,9 @@ var translator = (function() {
         year: "ปี",
         and: "และ"
       }
-      console.log(thai.merry)
       for (var i = 0; i < inputWords.length; i++) {
         translatedWords.push(thai[inputWords[i]]);
       }
       translation.innerHTML = translatedWords.join(" ");
     }
-  }
     })()
-
-submit.addEventListener("click", translator.thai)
