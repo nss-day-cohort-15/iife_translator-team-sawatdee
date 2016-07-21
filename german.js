@@ -1,5 +1,6 @@
 // var Translate = (function(German)
 
+  var translatedWords= [];
   var inputEnglish= "Merry Christmas"
   var German = {"christmas": "Weihnachten",
   					   "new": "neu",
@@ -21,14 +22,22 @@ console.log(inputWords);
 
 // FOR LOOP
 
-for (var i = 0; i< German.length; i++) {
-  German[i];
+for (var i = 0; i< inputWords.length; i++) {
 
 var key = inputWords[i]
-translatedWord= German[key]
-// pushes the value of translatedWord into a new variable called translatedWords
+// console.log(key);
+//merry//
+
+// console.log(German.merry);
+//frohlich
+
+// console.log(German[key]);
+//frohlich
+
+// translatedWord= German[key]
+// pushes the German value pair of translatedWord into a new variable called translatedWords
 translatedWords.push(German[inputWords[i]]);
-console.log (translatedWords);
+// console.log (translatedWords);
 
 }
 
