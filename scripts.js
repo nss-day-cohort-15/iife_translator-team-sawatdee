@@ -24,10 +24,8 @@ translator.checkLanguage = (function() {
       if (select.value === "pigLatin") {
         translator.getPigLatin();
       } else if (select.value === "Thai") {
-        console.log("Running Thai Conversion");
         translator.Thai();
       } else if (select.value === "German") {
-        console.log("Running German Conversion");
         translator.German();
       }
     }
