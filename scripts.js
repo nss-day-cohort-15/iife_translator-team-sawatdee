@@ -1,18 +1,25 @@
-var inputEnglish = "Merry Christmas"
-var Thai = {
-  Merry : "ร่าเริง",
-  Christmas : "คริสต์มาส",
-  Happy : "มีความสุข",
-  New: "ใหม่",
-  Year : "ปี",
-  and : "และ"
-}
 
-var inputWords = inputEnglish.split(" ");
-var translatedWords = [];
+var translator = (function() {
+  return {
+    getThai: function() {
+      var inputWords = inputText.value.toLowerCase().split(" ")
+      var translatedWords = [];
+      var thai = {
+        merry: "ร่าเริง",
+        christmas: "คริสต์มาส",
+        happy: "มีความสุข",
+        new: "ใหม่",
+        year: "ปี",
+        and: "และ"
+      }
+      console.log(thai.merry)
+      for (var i = 0; i < inputWords.length; i++) {
+        translatedWords.push(thai[inputWords[i]]);
+      }
+      translation.innerHTML = translatedWords.join(" ");
+    }
+  }
+    })()
 
-for (var i = 0; i < inputWords.length; i++) {
-  translatedWords.push(Thai[inputWords[i]]);
-}
+submit.addEventListener("click", translator.thai)
 
-console.log(translatedWords);
