@@ -20,5 +20,5 @@ function main() {
 
   var translatedPhrase = translatedWords.join(" ");
 
-  console.log(translatedPhrase);
+  console.log(translatedPhrase)
 }
