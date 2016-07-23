@@ -1,23 +1,22 @@
-var translator = {}
-
-translator.checkLanguage = (function() {
-  return function() {
-      if (select.value === "pigLatin") {
-        translator.getPigLatin();
-      } else if (select.value === "Thai") {
-        translator.Thai();
-      } else if (select.value === "German") {
-        translator.German();
-      }
+var Translator = (function(translator){
+  translator.translate = function() {
+    console.log("working")
+    var inputWords = inputText.value.toLowerCase().split(" ")
+    var translatedWords = [];
+    var language = translator[select.value]
+    for (var i = 0; i < inputWords.length; i++) {
+      translatedWords.push(language[inputWords[i]]);
     }
-})()
+    console.log(translatedWords)
+    translation.innerHTML = translatedWords.join(" ");
+  }
 
-translator.submitEvents = (function() {
-  submit.addEventListener("click", translator.checkLanguage)
+  submit.addEventListener("click", translator.translate)
   document.addEventListener("keypress", checkKey)
   function checkKey(e) {
     if (e.keyCode === 13) {
-      translator.checkLanguage();
+      translator.translate();
     }
   }
-})()
+  return translator;
+})(Translator || {})
